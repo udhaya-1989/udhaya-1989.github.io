@@ -42,6 +42,12 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="./">Introduction</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#active-power-management">Active power management</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#thermal-management">Thermal management</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#idle-power-management">Idle power management</a>
+    </li>
     </ul>
                 </li>
               </ul>
@@ -80,6 +86,22 @@
                 <h1 id="power-management-introduction">Power Management Introduction</h1>
 <p>Power management is a critical and complex topic in a system which aims at spending optimal energy to execute a workload optimally. It also means that, we neither overspend power which doesn't add any value (no improvement in workload efficiency) not underspend power which ends up in starvation of workload. The right balance will ensure that the performance per watt is high.</p>
 <p><img alt="voltage and frequency" src="../img/vf_curve.png" /></p>
+<p>Total power burnt varies based on input voltage and frequency, there are other factorts like temperature, capacitance of the circuit also impacts power. But for simplicity lets take only voltage and frequency.</p>
+<pre><code>P = V^2 * F
+</code></pre>
+<p>As per above formula, Power burnt is more when the chiplet/SoC is operating at high voltage and frequency.</p>
+<p>Power management is nothing but just playing around with Voltage and Clocks, but by taking several inputs from the system (like stalls, idles, temperature, latency, etc.) periodically. Though it sounds simple, the frequency at which this sampling needs to be done is quite high to ensure that we take necessary corrective actions at appropriate time.</p>
+<p>Power management can be divided in to below categories.</p>
+<pre><code>* Active power management
+* Thermal Management
+* Idle power Management
+</code></pre>
+<h2 id="active-power-management">Active power management</h2>
+<p><Todo:> Add description</p>
+<h2 id="thermal-management">Thermal management</h2>
+<p><Todo:> Add description</p>
+<h2 id="idle-power-management">Idle power management</h2>
+<p><Todo:> Add description</p>
               
             </div>
           </div><footer>
